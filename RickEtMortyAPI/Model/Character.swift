@@ -11,10 +11,17 @@ struct Result: Decodable {
     let results: [Character]
 }
 
+
 struct Character: Decodable {
     var id: Int
     var name: String
     var status: String
     var species: String
     var image: String
+    var location: Location
+}
+
+struct Location: Decodable {
+    let name: String
+    let url: String
 }

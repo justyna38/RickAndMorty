@@ -9,6 +9,7 @@ import Foundation
 
 class CharacterViewModel: ObservableObject {
     @Published var people: [Character] = []
+    @Published var location: String = ""
     
     func fetchCharacters(){
         let url = URL(string: "https://rickandmortyapi.com/api/character/")!
@@ -27,6 +28,8 @@ class CharacterViewModel: ObservableObject {
             
         }.resume()
     }
+    
+    
     
     
 }
